@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!--=============== REMIXICONS ===============-->
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+   <link rel="stylesheet" href="assets/css/styles.css">
+
+   <title>Gastronomy Site</title>
+
+   <style>
+      /* General Reset */
+      body {
+        font-size: 16px; /* Default size */
+         margin: 0;
+         font-family: Arial, sans-serif;
+         background-color: #f9f9f9;
+         color: #333;
+      }
+
+      /* Hero Section */
+      .hero {
+         background: url('') center/cover no-repeat; /* Add your hero background image URL */
+         color: white;
+         text-align: center;
+         padding: 5vw 5%; /* Make padding responsive */
+        }
+      html {
+   font-size: 100%; /* 1rem = 16px by default, will adjust based on zoom */
+}
+
+
+      .hero__title {
+         font-size: 3rem;
+         margin-bottom: 20px;
+      }
+
+      .hero__subtitle {
+         font-size: 1.5rem;
+         margin-bottom: 30px;
+      }
+
+      .hero__button {
+         display: inline-block;
+         padding: 10px 20px;
+         background-color: #ff6f61;
+         color: white;
+         text-decoration: none;
+         border-radius: 5px;
+         font-size: 1rem;
+         transition: background-color 0.3s;
+      }
+
+      .hero__button:hover {
+         background-color: #ff4c3b;
+      }
+
+      /* Categories Section */
+      .categories {
+         padding: 60px 20px;
+         background-color: #fff;
+         text-align: center;
+      }
+
+      .section__title {
+         font-size: 2.5rem;
+         margin-bottom: 40px;
+         color: #333;
+      }
+
+      .categories__grid {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+         gap: 20px;
+      }
+
+      .category__card {
+         background-color: #f4f4f4;
+         border-radius: 10px;
+         overflow: hidden;
+         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+         transition: transform 0.3s;
+      }
+
+      .category__card:hover {
+         transform: translateY(-10px);
+      }
+
+      .category__image {
+         width: 100%;
+         height: 150px;
+         object-fit: cover;
+      }
+
+      .category__name {
+         padding: 15px;
+         font-size: 1.25rem;
+         font-weight: bold;
+         color: #555;
+      }
+
+      /* Recipes Section */
+      .recipes {
+         padding: 60px 20px;
+         background-color: #f9f9f9;
+      }
+
+      .recipes__grid {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+         gap: 20px;
+      }
+
+      .recipe__card {
+         background-color: #fff;
+         border-radius: 10px;
+         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+         overflow: hidden;
+         transition: transform 0.3s;
+      }
+
+      .recipe__card:hover {
+         transform: translateY(-10px);
+      }
+
+      .recipe__image {
+         width: 100%;
+         height: 180px;
+         object-fit: cover;
+      }
+
+      .recipe__name {
+         padding: 15px;
+         font-size: 1.5rem;
+         font-weight: bold;
+         color: #333;
+      }
+
+      .recipe__description {
+         padding: 0 15px 15px;
+         font-size: 1rem;
+         color: #666;
+      }
+
+      /* Footer */
+      .footer {
+         background-color: #333;
+         color: white;
+         text-align: center;
+         padding: 20px;
+      }
+
+      .footer__text {
+         margin: 0;
+         font-size: 1rem;
+      }
+   </style>
+</head>
+<body>
+   <!--=============== HEADER ===============-->
+   <header class="header">
+    <nav class="nav container">
+      <div class="nav__data">
+         <a href="#" class="nav__logo">
+            <i class="nav__logo"></i> <img src="logo.png" alt="" style="width: 80px; height: auto; position: relative; top: 40px; left: -220px;">
+         </a>  
+         <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-menu-line nav__burger"></i>
+            <i class="i-close-line nav__close"></i>
+         </div>
+      </div>
+
+      <!--=============== NAV MENU ===============-->
+      <div class="nav__menu" id="nav-menu">
+         <ul class="nav__list">
+            <li><a href="home.html" class="nav__link">Home</a></li>
+
+            <!--=============== DROPDOWN 2 ===============-->
+            <li class="dropdown__item">
+               <div class="nav__link">
+                  Nos rubriques <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+               </div>
+
+               <ul class="dropdown__menu">
+                  <li>
+                     <a href="#" class="dropdown__link">
+                        <i class=""></i>  L'Anthropologie de la gastronomie
+
+                     </a>                          
+                  </li>
+
+                  <li>
+                     <a href="#" class="dropdown__link">
+                        <i class=""></i> L'histoire et l'authenticité
+                     </a>
+                  </li>
+
+                  <li>
+                     <a href="#" class="dropdown__link">
+                        <i class="e"></i> L'inventaire des plats
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" class="dropdown__link">
+                        <i class="e"></i>  Le patrimoine culinaire
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" class="dropdown__link">
+                        <i class="e"></i> La science de l'alimentation
+                     </a>
+                  </li>
+
+                  <li>
+                     <a href="#" class="dropdown__link">
+                        <i class="e"></i> Le rapport du tourisme
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" class="dropdown__link">
+                        <i class="e"></i> Le rôle des restaurants dans le promotion
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" class="dropdown__link">
+                        <i class="e"></i> Importance
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" class="dropdown__link">
+                        <i class="e"></i> Messages
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" class="dropdown__link">
+                        <i class="e"></i> Messages
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" class="dropdown__link">
+                        <i class="ri-message-3-line"></i> Messages
+                     </a>
+                  </li>
+               </ul>
+            </li>
+
+            <!--=============== DROPDOWN 1 ===============-->
+            <li class="dropdown__item">
+               <div class="nav__link">
+                  Nos recettes <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+               </div>
+
+               <ul class="dropdown__menu">
+                  <li>
+                     <a href="#" class="dropdown__link">
+                        <i class="salees"></i> salées 
+                     </a>                          
+                  </li>
+
+                  <li>
+                     <a href="#" class="dropdown__link">
+                        <i class=""></i> sucrées
+                     </a>
+                  </li>
+
+                  <!--=============== DROPDOWN SUBMENU ===============-->
+                  <li class="dropdown__subitem">
+                     <div class="dropdown__link">
+                        <i class="#"></i> autre <i class="ri-add-line dropdown__add"></i>
+                     </div>
+
+                     <ul class="dropdown__submenu">
+                        <li>
+                           <a href="#" class="dropdown__sublink">
+                              <i class="#"></i> Boissons et Infusions
+                           </a>
+                        </li>
+
+                        <li>
+                           <a href="#" class="dropdown__sublink">
+                              <i class="#"></i>Condiments et Épices
+                           </a>
+                        </li>
+
+                        <li>
+                           <a href="#" class="dropdown__sublink">
+                              <i class="#"></i> pâtisseries 
+                           </a>
+                        </li>
+                     </ul>
+                  </li>
+               </ul>
+            </li>
+            
+            <li><a href="#" class="nav__link">Livres</a></li>
+
+            <!--=============== DROPDOWN 2 ===============-->
+            <li class="dropdown__item">
+               <div class="nav__link">
+                  articles de recherche   <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+               </div>
+
+               <ul class="dropdown__menu">
+                  <li>
+                     <a href="#" class="dropdown__link">
+                        <i class="ri-user-line"></i> #
+                     </a>                          
+                  </li>
+
+                  <li>
+                     <a href="#" class="dropdown__link">
+                        <i class="ri-lock-line"></i> #
+                     </a>
+                  </li>
+
+                  <li>
+                     <a href="#" class="dropdown__link">
+                        <i class="ri-message-3-line"></i> #
+                     </a>
+                  </li>
+               </ul>
+            </li>
+            <!--=============== DROPDOWN 2 ===============-->
+            <li class="dropdown__item">
+               <a href="president.html" class="nav__link">
+               <div class="nav__link">
+                  mot de Président <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+               </div>
+            </a>
+
+            </li>
+
+            <li><a href="contact.html" class="nav__link">Contact</a></li>
+         </ul>
+      </div>
+   </nav>
+</header>
+>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+   <!--=============== HERO SECTION ===============-->
+   <section class="hero" style="background: url('tajine.jpg') center/cover no-repeat; padding: 50px 20px; text-align: center; color: #fff; font-family: 'Poppins', sans-serif;">
+    <h1 class="hero__title" style="font-size: 3rem; font-weight: 700; margin-bottom: 20px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);">
+        Discover the World of Gastronomy
+    </h1>
+    <p class="hero__subtitle" style="font-size: 1.5rem; font-weight: 400; margin-bottom: 30px; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);">
+        Explore recipes, culinary traditions, and more
+    </p>
+    <a href="#" class="hero__button" style="font-size: 1.2rem; font-weight: 600; padding: 12px 25px; background-color: #ff7c57; color: #fff; text-decoration: none; border-radius: 25px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); transition: transform 0.2s, background-color 0.2s;">
+        MEMBRES DU BUREAU
+    </a>
+</section>
+
+ 
+
+   <!--=============== CATEGORIES SECTION ===============-->
+   <section class="categories">
+    <h2 class="section__title">Explore Our Categories</h2>
+    <div class="categories__grid">
+       <!-- Category 1 -->
+       <a href="category1.html" class="category__card">
+          <img src="tajine.jpg" alt="Category 1" class="category__image"> <!-- Add image URL -->
+          <p class="category__name">sucree</p>
+       </a>
+ 
+       <!-- Category 2 -->
+       <a href="category2.html" class="category__card">
+          <img src="patt.jpeg" alt="Category 2" class="category__image"> <!-- Add image URL -->
+          <p class="category__name">patessrie</p>
+       </a>
+ 
+       <!-- Category 3 -->
+       <a href="category3.html" class="category__card">
+          <img src="pastilla-marocaine-invention-150x150.jpg" alt="Category 3" class="category__image"> <!-- Add image URL -->
+          <p class="category__name">sucree</p>
+       </a>
+    </div>
+ </section>
+ 
+
+   <!--=============== RECIPES SECTION ===============-->
+   <section class="recipes">
+      <h2 class="section__title">Our Featured Recipes</h2>
+      <div class="recipes__grid">
+         <div class="recipe__card">
+            <img src="" alt="Recipe 1" class="recipe__image"> <!-- Add image URL -->
+            <h3 class="recipe__name">Recipe 1</h3>
+            <p class="recipe__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+         </div>
+         <div class="recipe__card">
+            <img src="" alt="Recipe 2" class="recipe__image"> <!-- Add image URL -->
+            <h3 class="recipe__name">Recipe 2</h3>
+            <p class="recipe__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+         </div>
+         <div class="recipe__card">
+            <img src="" alt="Recipe 3" class="recipe__image"> <!-- Add image URL -->
+            <h3 class="recipe__name">Recipe 3</h3>
+            <p class="recipe__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+         </div>
+      </div>
+   </section>
+
+   <!--=============== FOOTER ===============-->
+   <footer class="footer">
+      <p class="footer__text">© 2024 Gastronomy World. All Rights Reserved.</p>
+   </footer>
+</body>
+</html>
+lkhedma 
